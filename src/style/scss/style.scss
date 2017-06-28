@@ -3,18 +3,35 @@
 * {
   box-sizing: border-box;
 }
+h1 {
+  font-size: $h1-font-size;
+}
+h2 {
+  font-size: $h2-font-size;
+}
+h3 {
+  font-size: $h3-font-size;
+}
+h4 {
+  font-size: $h4-font-size;
+}
+h5 {
+  font-size: $h5-font-size;
+}
+h6 {
+  font-size: $h6-font-size;
+}
 nav {
-  background-color: $nav-red;
+  background-color: $main-color;
   margin-bottom: 20px;
   img {
     margin: 15px 30px 15px 0;
     float: left;
   }
   h1 {
-    margin-top: 25px;
-    font-size: 1.8em;
+    margin-top: 20px;
     float: right;
-    color: $nav-h1-color;
+    color: #fff;
   }
 }
 section {
