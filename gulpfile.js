@@ -12,7 +12,7 @@ gulp.task('serve', function() {
     server: 'src'
   });
   gulp.watch('src/**/**/*.html', ['reload']);
-  gulp.watch('src/style/**/*.scss', ['sass']);
+  gulp.watch('src/style/**/*.scss', ['sass'], ['reload']);
   gulp.watch('src/js/**/*.js', ['reload']);
 });
 

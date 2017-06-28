@@ -1,31 +1,34 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Try Angular v1.5.0</title>
-<<<<<<< HEAD
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-=======
->>>>>>> 20d6d8f60eedc96faef7ddee47937f25ee06a4d4
     <link rel="icon" href="https://cdn.worldvectorlogo.com/logos/angular-icon-1.svg" type="image/gif" sizes="16x16">
     <link rel="stylesheet" href="style/css/style.css">
-    <link rel="text/javascript" href="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js">
+
 </head>
 <body>
-    <nav>
-        <img src="https://cdn.worldvectorlogo.com/logos/angular-icon-1.svg" width="50" height="50">
-        <h1>Try Angular v1.5.0</h1>
+    <nav class="container-fluid">
+        <div class="container">
+          <img src="https://cdn.worldvectorlogo.com/logos/angular-icon-1.svg" width="50" height="50">
+          <h1>Try Angular v1.5.0</h1>
+        </div>
     </nav>
-<<<<<<< HEAD
+    <section class="container">
+      <p ng-class="{'new-class': input1, 'new-class2' : input2=='more'}">Hello
+        <span ng-if="input1">{{input1}}</span>
+        <span ng-if="!input1">World!</span>
+      </p>
+      <input type="text" ng-model="input1" placeholder="Insert your text here">
+      <input type="text" ng-model="input2" placeholder="Insert your text here">
+    </section>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 </body>
 </html>
-=======
-    
-</body>
-</html>
->>>>>>> 20d6d8f60eedc96faef7ddee47937f25ee06a4d4
