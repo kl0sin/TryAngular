@@ -36,11 +36,18 @@ nav {
   }
 }
 section {
+  select {
+    padding: 5px 10px;
+    font-style: italic;
+    color: #7a7a7a;
+  }
   p {
     transition: .3s;
     font-size: 1.3em;
   }
-  padding: 15px;
+  .date {
+    margin-right: 20px;
+  }
   .new-class, {
     font-size: 2em;
   }
@@ -83,7 +90,7 @@ section {
     font-size: $h1-font-size;
   }
   hr {
-    margin: 30px 0 0;
+    margin: 30px 0 30px;
   }
   ul {
     list-style: none;

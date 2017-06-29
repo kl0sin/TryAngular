@@ -32,18 +32,22 @@
       <input type="text" ng-model="input2" placeholder="Insert your text here">
       <hr>
     </section>
+
+
+
     <section  class="container" ng-controller="tryAngularListCtrl">
       <h3>Control list</h3>
       <input class="search" type="text" ng-model="search" placeholder="Search your list item">
-      <select ng-options="list.listLabel for list in selectItems.availableOptions track by list.listLabel"
-              ng-model="selectItems.selectedOption">>
+      <select ng-model="orderList" >
+        <option value="" disabled selected hidden>Select Order type</option>
+        <option ng-repeat="selectItem in selectItems" value="{{selectItem.value}}">{{selectItem.listLabel}}</option>
       </select>
       <p>Searching element:
       <span ng-if="search">{{search}}</span>
       <span ng-if="!search"><i>None</i></span></p>
-      <ul ng-repeat='listItem in listItems | filter: search' ng-class="{'done' : checkTest}">
+      <ul ng-repeat='listItem in listItems | filter: search | orderBy: orderList' ng-class="{'done' : checkTest}">
         <li>
-          <input type="checkbox" ng-model="checkTest"><span>{{listItem.listText}}</span>
+          <input type="checkbox" ng-model="checkTest"><span class="date">{{listItem.date}}</span><span>{{listItem.listText}}</span>
         </li>
       </ul>
       <hr>
