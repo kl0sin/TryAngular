@@ -14,7 +14,7 @@
     <script src="js/script.js"></script>
 </head>
 
-<body>
+<body ng-app="appTest">
     <nav class="container-fluid">
         <div class="container">
           <img src="https://cdn.worldvectorlogo.com/logos/angular-icon-1.svg" width="50" height="50">
@@ -22,7 +22,7 @@
         </div>
     </nav>
 
-    <section class="container" ng-app>
+    <section class="container" ng-controller="inputTestCtrl">
       <p ng-class="{'new-class': input1, 'new-class2' : input2=='more'}">Hello
         <span ng-if="input1">{{input1}}</span>
         <span ng-if="!input1">World!</span>
@@ -31,7 +31,7 @@
       <input type="text" ng-model="input2" placeholder="Insert your text here">
       <hr>
     </section>
-    <section class="container" ng-app="TryAngularList" ng-controller="TryAngularListCtrl">
+    <section  class="container" ng-controller="tryAngularListCtrl">
       <h3>Control list</h3>
       <ul ng-repeat='listItem in listItems' ng-class="{'done' : checkTest}">
         <li>

@@ -1,6 +1,10 @@
-let TryAngularList = angular.module('TryAngularList', []);
+const app = angular.module('appTest', []);
 
-TryAngularList.controller('TryAngularListCtrl', function ($scope) {
+app.controller('inputTestCtrl', function() {
+
+});
+
+app.controller('tryAngularListCtrl', function ($scope) {
     $scope.listItems = [
       {'listText': 'Przykładowy element listy 1'},
       {'listText': 'Przykładowy element listy 2'},
