@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="appTest">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,7 +14,7 @@
     <script src="js/script.js"></script>
 </head>
 
-<body ng-app="appTest">
+<body>
     <nav class="container-fluid">
         <div class="container">
           <img src="https://cdn.worldvectorlogo.com/logos/angular-icon-1.svg" width="50" height="50">
@@ -34,11 +34,16 @@
     </section>
     <section  class="container" ng-controller="tryAngularListCtrl">
       <h3>Control list</h3>
-      <ul ng-repeat='listItem in listItems' ng-class="{'done' : checkTest}">
+      <input class="search" type="text" ng-model="search" placeholder="Search your list item">
+      <p>Searching element:
+      <span ng-if="search">{{search}}</span>
+      <span ng-if="!search"><i>None</i></span></p>
+      <ul ng-repeat='listItem in listItems | filter: search' ng-class="{'done' : checkTest}">
         <li>
           <input type="checkbox" ng-model="checkTest"><span>{{listItem.listText}}</span>
         </li>
       </ul>
+      <hr>
     </section>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
