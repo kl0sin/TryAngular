@@ -35,6 +35,9 @@
     <section  class="container" ng-controller="tryAngularListCtrl">
       <h3>Control list</h3>
       <input class="search" type="text" ng-model="search" placeholder="Search your list item">
+      <select ng-options="list.listLabel for list in selectItems.availableOptions track by list.listLabel"
+              ng-model="selectItems.selectedOption">>
+      </select>
       <p>Searching element:
       <span ng-if="search">{{search}}</span>
       <span ng-if="!search"><i>None</i></span></p>

@@ -10,5 +10,12 @@ app.controller('tryAngularListCtrl', function ($scope) {
       {'listText': 'Przykładowy element listy 2'},
       {'listText': 'Przykładowy element listy 3'},
       {'listText': 'Przykładowy element listy 4'},
-    ];
+    ],
+    $scope.selectItems = {
+      avaiableOptions: [
+        {'value': 'lsitText', 'listLabel': 'Alphabetical (A - Z)'},
+        {'value': '-listText', 'listLabel': 'Alphabetical (Z - A)'}
+      ],
+      selectedOption: {'value': 'lsitText', 'listLabel': 'Alphabetical (A - Z)'}
+    };
 });
