@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="TryAngular">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,8 +11,9 @@
     <link rel="stylesheet" href="style/css/style.css">
     <script src="js/app/app.module.js"></script>
     <script src="js/app/app.config.js"></script>
-
+    <script src="js/script.js"></script>
 </head>
+
 <body>
     <nav class="container-fluid">
         <div class="container">
@@ -20,16 +21,24 @@
           <h1>Try Angular v1.5.0</h1>
         </div>
     </nav>
-    <section class="container">
+
+    <section class="container" ng-app>
       <p ng-class="{'new-class': input1, 'new-class2' : input2=='more'}">Hello
         <span ng-if="input1">{{input1}}</span>
         <span ng-if="!input1">World!</span>
       </p>
       <input type="text" ng-model="input1" placeholder="Insert your text here">
       <input type="text" ng-model="input2" placeholder="Insert your text here">
+      <hr>
     </section>
-    <hr>
-
+    <section class="container" ng-app="TryAngularList" ng-controller="TryAngularListCtrl">
+      <h3>Control list</h3>
+      <ul ng-repeat='listItem in listItems' ng-class="{'done' : checkTest}">
+        <li>
+          <input type="checkbox" ng-model="checkTest"><span>{{listItem.listText}}</span>
+        </li>
+      </ul>
+    </section>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
