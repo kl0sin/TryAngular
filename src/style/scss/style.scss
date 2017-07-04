@@ -121,4 +121,15 @@ section {
       }
     }
   }
+  .sort-menu {
+    width: 100%;
+    background-color: $main-orange;
+    padding: 15px;
+    margin-bottom: 15px;
+    h4 {
+      text-transform: uppercase;
+      text-align: center;
+      color: $white;
+    }
+  }
   }

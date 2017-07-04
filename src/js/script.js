@@ -22,3 +22,17 @@ app.controller('tryAngularListCtrl', function ($scope) {
         {value: '-listText', listLabel: 'Alphabetical (Z - A)'}
       ]
 });
+
+app.controller('gravatarTestCtrl', function($scope, Gravatar) {
+      $scope.gravatrUrl = function(email) {
+        return Gravatar(email);
+      }
+      // $scope.gravatarUrl = "http://www.gravatar.com/avatar/" + md5("mkklosin@gmail.com") + "?size=200.jpg";
+});
+app.factory("Gravatar", function GravatarFactory() {
+  var avatarSize = 200;
+  var avatarUrl = "http://www.gravatar.com/avatar/";
+  return function(email) {
+    return avatarUrl = md5(email) + "?size=" + avatarSize.toString();
+  }
+})

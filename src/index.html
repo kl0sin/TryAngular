@@ -52,7 +52,15 @@
       </ul>
       <hr>
     </section>
-
+    <section class="container" ng-controller="gravatarTestCtrl">
+      <div class="col-sm-3">
+        <img ng-src="{{image}}">
+      </div>
+      <div class="col-sm-9">test</div>
+      <p>{{gravatarUrl}}</p>
+      <input ng-model="emailGrav">
+    </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/blueimp-md5/2.7.0/js/md5.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 </body>
