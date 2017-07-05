@@ -32,20 +32,41 @@
       <input type="text" ng-model="input2" placeholder="Insert your text here">
       <hr>
     </section>
+
+
+
     <section  class="container" ng-controller="tryAngularListCtrl">
       <h3>Control list</h3>
       <input class="search" type="text" ng-model="search" placeholder="Search your list item">
+      <select ng-model="orderList" >
+        <option value="" disabled selected hidden>Select Order type</option>
+        <option ng-repeat="selectItem in selectItems" value="{{selectItem.value}}">{{selectItem.listLabel}}</option>
+      </select>
       <p>Searching element:
       <span ng-if="search">{{search}}</span>
       <span ng-if="!search"><i>None</i></span></p>
-      <ul ng-repeat='listItem in listItems | filter: search' ng-class="{'done' : checkTest}">
-        <li>
-          <input type="checkbox" ng-model="checkTest"><span>{{listItem.listText}}</span>
+      <ul>
+        <li ng-repeat='listItem in listItems | filter: search | orderBy: orderList' ng-class="{'done' : checkTest}">
+          <input type="checkbox" ng-model="checkTest"><span class="date">{{listItem.date}}</span><span>{{listItem.listText}}</span>
         </li>
       </ul>
       <hr>
     </section>
+    <section class="container gravatar-box" ng-controller="gravatarTestCtrl">
+      <h3>Use your e-mail to find your gravatar</h3>
+      <div class="col-sm-3">
+        <img ng-if="!gravatarCompleteUrl" ng-src="{{gravatarUrl + '?size=' + imageSize}}">
+        <img ng-if="gravatarCompleteUrl" ng-src="{{gravatarCompleteUrl}}">
+      </div>
+      <div class="col-sm-9"></div>
+      <p><b>emailGrav:</b> {{emailGrav}} <br>
+      <b>userEmail:</b> {{userEmail}} <br>
+      <b>gravatarCompleteUrl:</b> {{gravatarCompleteUrl}} <br></p>
 
+      <input ng-model="emailGrav" placeholder="Insert your e-mail adress here">
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/blueimp-md5/2.7.0/js/md5.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 </body>

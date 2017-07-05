@@ -2,6 +2,7 @@
 
 * {
   box-sizing: border-box;
+  font-size: 1em;
 }
 h1 {
   font-size: $h1-font-size;
@@ -36,11 +37,18 @@ nav {
   }
 }
 section {
+  select {
+    padding: 5px 10px;
+    font-style: italic;
+    color: #7a7a7a;
+  }
   p {
     transition: .3s;
     font-size: 1.3em;
   }
-  padding: 15px;
+  .date {
+    margin-right: 20px;
+  }
   .new-class, {
     font-size: 2em;
   }
@@ -83,12 +91,13 @@ section {
     font-size: $h1-font-size;
   }
   hr {
-    margin: 30px 0 0;
+    margin: 30px 0 30px;
   }
   ul {
     list-style: none;
     padding-left: 10px;
     li {
+      transition: .3s;
       padding: 5px 0;
     }
   }
@@ -114,4 +123,26 @@ section {
       }
     }
   }
+  .sort-menu {
+    width: 100%;
+    background-color: $main-orange;
+    padding: 15px;
+    margin-bottom: 15px;
+    h4 {
+      text-transform: uppercase;
+      text-align: center;
+      color: $white;
+    }
+  }
+  }
+  .gravatar-box {
+    padding-bottom: 20px;
+    line-height: 1.9em;
+    h3 {
+      padding: 0 0 30px 0;
+    }
+    input {
+      margin: 10px 0 0;
+      width: 300px;
+    }
   }
