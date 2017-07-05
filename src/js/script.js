@@ -23,16 +23,15 @@ app.controller('tryAngularListCtrl', function ($scope) {
       ]
 });
 
-app.controller('gravatarTestCtrl', function($scope, Gravatar) {
-      $scope.gravatrUrl = function(email) {
-        return Gravatar(email);
-      }
-      // $scope.gravatarUrl = "http://www.gravatar.com/avatar/" + md5("mkklosin@gmail.com") + "?size=200.jpg";
+app.controller("gravatarTestCtrl", function($scope, $interval) {
+  $scope.imageSize = "200";
+  $scope.gravatarUrl = "http://www.gravatar.com/avatar/";
+  $interval(function (imageSize) {
+      if ($scope.emailGrav) {
+      $scope.userEmail = md5(($scope.emailGrav).toString());
+    } else {
+      $scope.userEmail = "";
+    }
+      $scope.gravatarCompleteUrl = $scope.gravatarUrl + $scope.userEmail + '?size=' + $scope.imageSize;
+  }, 1000);
 });
-app.factory("Gravatar", function GravatarFactory() {
-  var avatarSize = 200;
-  var avatarUrl = "http://www.gravatar.com/avatar/";
-  return function(email) {
-    return avatarUrl = md5(email) + "?size=" + avatarSize.toString();
-  }
-})

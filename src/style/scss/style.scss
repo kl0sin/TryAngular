@@ -2,6 +2,7 @@
 
 * {
   box-sizing: border-box;
+  font-size: 1em;
 }
 h1 {
   font-size: $h1-font-size;
@@ -96,6 +97,7 @@ section {
     list-style: none;
     padding-left: 10px;
     li {
+      transition: .3s;
       padding: 5px 0;
     }
   }
@@ -132,4 +134,15 @@ section {
       color: $white;
     }
   }
+  }
+  .gravatar-box {
+    padding-bottom: 20px;
+    line-height: 1.9em;
+    h3 {
+      padding: 0 0 30px 0;
+    }
+    input {
+      margin: 10px 0 0;
+      width: 300px;
+    }
   }
